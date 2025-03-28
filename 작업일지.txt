@@ -1,0 +1,12 @@
+25.3.25.
+  - '작업일지.txt' 작성 확인 테스트 생성
+
+25.3.27.
+  - fetch error
+    https://github.com/inseong01/inseong01/actions/runs/14100248147/job/39495003411?pr=13
+
+25.3.28.
+  - actions/checkout@v4
+  https://github.com/actions/checkout?tab=readme-ov-file#Checkout-a-different-branch
+
+  - 'package.json' 작성 확인 테스트 생성
