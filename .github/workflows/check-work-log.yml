@@ -5,11 +5,10 @@ run-name: ${{github.repository}} is running
 on:
   push:
     branches:
-      - '**' # 모든 브랜치 적용
+      - '**' # all branches
 
 jobs:
   check-work-log-file:
-    if: github.repository == 'inseong01/inseong01'
     runs-on: ubuntu-latest
 
     steps:

@@ -9,7 +9,6 @@ on:
 
 jobs:
   check-package-version:
-    if: github.repository == 'inseong01/inseong01'
     runs-on: ubuntu-latest
 
     steps:
