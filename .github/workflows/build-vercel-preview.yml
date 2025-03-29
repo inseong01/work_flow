@@ -8,6 +8,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   VITE_CODE: ${{ secrets.VITE_CODE }}
+  ENV_VITE_CODE: ${{ secrets.ENV.VITE_CODE }}
 
 on:
   push:
@@ -23,15 +24,20 @@ jobs:
       - name: Use actions/checkout@v4
         uses: actions/checkout@v4
 
-      - name: Install Vercel CLI
-        run: npm install --global vercel@canary
+      - name: Log env
+        run: |
+          echo $VITE_CODE
+          echo ${{ env.VITE_CODE }}
+          echo ${{ env.ENV_VITE_CODE }}
+      # - name: Install Vercel CLI
+      #   run: npm install --global vercel@canary
 
-      - name: Pull Vercel Environment Information
-        # Create a Vercel token on the Vercel account settings page
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Pull Vercel Environment Information
+      #   # Create a Vercel token on the Vercel account settings page
+      #   run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Build Project Artifacts
+      #   run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Deploy Project Artifacts to Vercel
+      #   run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
