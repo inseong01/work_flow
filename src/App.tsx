@@ -11,6 +11,12 @@ function App() {
   console.log('mode: ', mode);
   console.log('code: ', code);
 
+  if (code === 123) {
+    console.log('It is number');
+  } else if (code === '123') {
+    console.log('It is string');
+  }
+
   return (
     <>
       <div>
