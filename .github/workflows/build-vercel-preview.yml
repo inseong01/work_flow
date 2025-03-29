@@ -8,8 +8,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   VITE_CODE: ${{ secrets.VITE_CODE }}
-  VITE_ENV: ${{ secrets.VITE_ENV }}
-  ENV_VITE_CODE: ${{ secrets.production.VITE_CODE }}
+  VITE_ENV: ${{ vars.VITE_ENV }}
 
 on:
   push:
@@ -29,8 +28,8 @@ jobs:
         run: |
           echo "$VITE_CODE"
           echo "VITE_CODE: ${{ env.VITE_CODE }}"
-          echo "VITE_ENV: ${{ env.VITE_ENV }}"
-          echo "ENV_VITE_CODE: ${{ env.ENV_VITE_CODE }}"
+          echo "VITE_ENV: $VITE_ENV"
+          echo "VITE_ENV: ${{ vars.VITE_ENV }}"
       # - name: Install Vercel CLI
       #   run: npm install --global vercel@canary
 
