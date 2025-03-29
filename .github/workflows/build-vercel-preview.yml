@@ -11,11 +11,12 @@ env:
 on:
   push:
     branches:
-      - 'test'
+      - 'third_action'
 
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Use actions/checkout@v4

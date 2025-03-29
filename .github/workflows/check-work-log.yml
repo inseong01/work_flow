@@ -4,7 +4,7 @@ run-name: ${{github.repository}} is running
 
 on:
   push:
-    branches:
+    branches-ignore:
       - '**' # all branches
 
 jobs:
