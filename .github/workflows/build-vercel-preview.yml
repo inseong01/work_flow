@@ -7,6 +7,7 @@ env:
   # Both ORG_ID and PROJECT_ID are stored in the .vercel/project.json file
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VITE_CODE: ${{ secrets.VITE_CODE }}
 
 on:
   push:

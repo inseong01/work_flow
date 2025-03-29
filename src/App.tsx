@@ -15,6 +15,8 @@ function App() {
     console.log('It is number');
   } else if (code === '123') {
     console.log('It is string');
+  } else {
+    console.log('Code is undefined ');
   }
 
   return (
