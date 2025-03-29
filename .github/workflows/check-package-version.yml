@@ -4,8 +4,8 @@ run-name: ${{github.repository}} is running
 
 on:
   pull_request:
-    branches:
-      - '**'
+    branches-ignore:
+      - 'main'
 
 jobs:
   check-package-version:
